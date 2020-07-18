@@ -1,0 +1,31 @@
+@urirest=http://localhost:3001/api/rest
+@ajson=Accept: application/json
+@cjson=Content-Type: application/json
+@token=Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMGQ5MGI2YzFjMzYzMDg5NDEwOTM1NyIsImlhdCI6MTU2MjU0NzQ1M30.fv_mERqbTr9NXwz1JRh3z07UvtboN-CmqhBRRVwLvRE
+###
+POST {{urirest}}/categories
+{{ajson}}
+{{cjson}}
+{{token}}
+
+{
+    "name": "首页",
+    "sort": 1,
+    "enabled": true,
+    "parent": "5d22972d1ceecd4cb33c28b9"
+}
+###
+POST {{urirest}}/categories
+{{ajson}}
+{{cjson}}
+
+{
+    "email": "user1@live.cn",
+    "username": "user1",
+    "password": "123456"
+}
+###
+GET {{urirest}}/categories
+{{ajson}}
+{{cjson}}
+{{token}}

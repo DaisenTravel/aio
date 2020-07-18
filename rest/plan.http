@@ -1,0 +1,28 @@
+@uri=http://localhost:3001/admin/api
+@urirest=http://localhost:3001/admin/api
+@ajson=Accept: application/json
+@cjson=Content-Type: application/json
+@token=Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMGQ5MGI2YzFjMzYzMDg5NDEwOTM1NyIsImlhdCI6MTU2MzQ0MzM3NH0.rlAJTAJE4zEyWZhGe8uD_TFvLb0tzy4OXCSyUJD6iOI
+###
+GET  {{urirest}}/rest/plans
+{{ajson}}
+{{cjson}}
+###
+GET  {{urirest}}/rest/plans/5d3035b0fe480564c607b942/patient
+{{ajson}}
+{{cjson}}
+###
+POST {{urirest}}/users
+{{ajson}}
+{{cjson}}
+
+{
+    "email": "user1@live.cn",
+    "username": "user1",
+    "password": "123456"
+}
+###
+GET {{urirest}}/users
+{{ajson}}
+{{cjson}}
+{{token}}

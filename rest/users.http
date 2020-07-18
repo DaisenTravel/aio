@@ -1,0 +1,53 @@
+@urirest=http://localhost:3001/api/rest
+@uriauth=http://localhost:3001/api/auth
+@ajson=Accept: application/json
+@cjson=Content-Type: application/json; charset=utf-8
+@token=Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlNzg1NWU5ZDNkZGI1MmRiYzM3M2FkYyIsImlhdCI6MTU4NjI0NTM0NCwiZXhwIjoxNTg2MjUyNTQ0fQ.F9mU9JuRkKJl0tuEbZN0SEzXGsfHxAk_lNwnEPbdGTA
+###
+POST {{urirest}}/users
+{{ajson}}
+{{cjson}}
+{{token}}
+
+{
+    "email": "admin@live.cn",
+    "username": "admin",
+    "password": "123456"
+}
+###
+POST {{uriauth}}/register
+{{ajson}}
+{{cjson}}
+
+{
+    "email": "admin@live.cn",
+    "password": "123456"
+}
+###
+POST {{uriauth}}/login
+{{ajson}}
+{{cjson}}
+
+{
+    "email": "admin@live.cn",
+    "password": "123456"
+}
+###
+POST {{uriauth}}/login
+{{ajson}}
+{{cjson}}
+
+{
+    "email": "user1@live.cn",
+    "password": "123456"
+}
+###
+GET {{urirest}}/users
+{{ajson}}
+{{cjson}}
+{{token}}
+###
+GET {{urirest}}/users/5e7855e9d3ddb52dbc373adc
+{{ajson}}
+{{cjson}}
+{{token}}

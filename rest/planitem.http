@@ -1,0 +1,9 @@
+@uri=http://localhost:3001/admin/api
+@urirest=http://localhost:3001/admin/api
+@ajson=Accept: application/json
+@cjson=Content-Type: application/json
+@token=Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMGQ5MGI2YzFjMzYzMDg5NDEwOTM1NyIsImlhdCI6MTU2NTE2NTY0M30.H0dGCL55hkQhemSVNCzIUg5t_3vJ-oCu_rA5rOxIWG4
+###
+GET  {{urirest}}/rest/planitems/5d451665b8849903288e288c/patient/5d45209671657403363271a0
+{{ajson}}
+{{cjson}}
