@@ -1,0 +1,25 @@
+@uri=http://localhost:3001/api/weichat
+@ajson=Accept: application/json
+@cjson=Content-Type: application/json
+###
+GET  {{uri}}/token
+{{ajson}}
+{{cjson}}
+###
+GET  {{uri}}/rest/plans/5d3035b0fe480564c607b942/patient
+{{ajson}}
+{{cjson}}
+###
+POST {{uri}}/users
+{{ajson}}
+{{cjson}}
+
+{
+    "email": "user1@live.cn",
+    "username": "user1",
+    "password": "123456"
+}
+###
+GET {{uri}}/users
+{{ajson}}
+{{cjson}}

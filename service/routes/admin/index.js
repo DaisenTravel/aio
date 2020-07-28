@@ -179,8 +179,8 @@ module.exports = app => {
     })
 
     // 校验中间件
-    // app.use('/api/rest/:resource', resourceMiddleware(), router) //不用token验证
-    app.use('/api/rest/:resource', authMiddleware(), resourceMiddleware(), router)  //使用token验证
+    app.use('/api/rest/:resource', resourceMiddleware(), router) //不用token验证
+    // app.use('/api/rest/:resource', authMiddleware(), resourceMiddleware(), router)  //使用token验证
 
     // 全局错误处理函数
     app.use(async (err, req, res, next) => {

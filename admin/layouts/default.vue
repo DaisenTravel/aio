@@ -57,7 +57,7 @@
 export default {
   data() {
     return {
-      clipped: true,
+      clipped: false,
       drawer: true,
       fixed: false,
       items: [
@@ -75,6 +75,11 @@ export default {
           icon: 'mdi-chart-bubble',
           title: 'VueX',
           to: '/vuex'
+        },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Cone',
+          to: '/cone'
         }
       ],
       miniVariant: false,

@@ -24,6 +24,7 @@ app.get('/', async (req, res, next) => {
 
 require('./plugins/db')(app)
 require('./routes/admin')(app)
+require('./routes/weichat')(app)
 require('./routes/web')(app)
 
 const port = 3001
